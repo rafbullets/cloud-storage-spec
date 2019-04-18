@@ -2,31 +2,32 @@ package specification.operations.folder;
 
 import specification.model.FolderWrapper;
 
-public interface FolderBasicOperations
-{
+public interface FolderBasicOperations {
     /**
      * Creates folder on given location.
      *
-     * @param location
-     * @param name
-     * @return
+     * @param location on storage from root, without file name
+     * @param name     folder name
      */
     void createFolder(String location, String name) throws Exception;
 
     /**
-     * @param location
-     * @param name
-     * @param metadata
-     * @throws Exception
+     * Creates folder on given location with given name. Stores additional metadata about folder.
+     *
+     * @param location on storage from root, without file name
+     * @param name     folder name
+     * @param metadata metadata associated with newly created folder
+     * @throws Exception if something bad happens
      */
     void createFolder(String location, String name, String metadata) throws Exception;
 
     /**
+     * Returns folder's content.
      *
-     * @param path
-     * @param folderName
-     * @return
-     * @throws Exception
+     * @param location   on storage from root, without file name
+     * @param folderName name of the folder on given location
+     * @return {@link FolderWrapper} which contains data about folder
+     * @throws Exception if something bad happens
      */
-    FolderWrapper listFolder(String path, String folderName) throws Exception;
+    FolderWrapper listFolder(String location, String folderName) throws Exception;
 }

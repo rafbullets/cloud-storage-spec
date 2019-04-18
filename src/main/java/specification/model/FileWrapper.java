@@ -18,10 +18,6 @@ public class FileWrapper extends Wrapper
         this.metadata = metadata;
     }
 
-    public String getMetadataPath() {
-        return this.getPath() + ".__" + this.getName();
-    }
-
     public File getFile() {
         return file;
     }

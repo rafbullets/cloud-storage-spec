@@ -10,4 +10,8 @@ public class FolderWrapper extends Wrapper
         this.folderResults = folderResults;
         this.metadata = folderMetadata;
     }
+
+    public List<FolderResult> getFolderResults() {
+        return folderResults;
+    }
 }

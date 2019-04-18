@@ -45,6 +45,7 @@ public interface FileBasicOperations {
      * @param pathOnDisk where file will be downloaded, with file name.
      * @throws IOException if something happend
      * @throws Exception   should be thrown maybe
+     * @return FileWrapper which holds all data for downloaded file
      */
     FileWrapper downloadFile(String location, String name, String pathOnDisk) throws IOException, Exception;
 }

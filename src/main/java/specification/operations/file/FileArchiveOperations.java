@@ -12,6 +12,8 @@ public interface FileArchiveOperations {
      * @param location path where .zip file will be uploaded
      * @param name     name of the .zip file
      * @param meta     metadata for zip file
+     * @throws IOException if something happend
+     * @throws Exception   should be thrown maybe
      */
     void uploadAsZipFile(List<File> files, String location, String name, String meta) throws IOException, Exception;
 }

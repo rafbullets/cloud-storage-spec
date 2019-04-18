@@ -8,6 +8,7 @@ public interface FolderBasicOperations {
      *
      * @param location on storage from root, without file name
      * @param name     folder name
+     * @throws Exception if something bad happens
      */
     void createFolder(String location, String name) throws Exception;
 

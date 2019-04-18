@@ -13,6 +13,8 @@ public interface FileBasicOperations {
      * @param file     file which will be uploaded
      * @param location file location on storage, without file name
      * @param name     file name with extension
+     * @throws IOException if something happend
+     * @throws Exception   should be thrown maybe
      */
     void uploadFile(File file, String location, String name) throws IOException, Exception;
 
@@ -29,6 +31,9 @@ public interface FileBasicOperations {
      * Concurrently upload multiple files.
      *
      * @param files to be uploaded
+     * @throws IOException if something happend
+     * @throws Exception   should be thrown maybe
+     *
      */
     void uploadMultipleFiles(List<FileWrapper> files) throws IOException, Exception;
 
@@ -38,6 +43,8 @@ public interface FileBasicOperations {
      * @param location   file location on storage from root, without file name
      * @param name       file name on pathToFile that will be downloaded. If file has extension, has to be added.
      * @param pathOnDisk where file will be downloaded, with file name.
+     * @throws IOException if something happend
+     * @throws Exception   should be thrown maybe
      */
     FileWrapper downloadFile(String location, String name, String pathOnDisk) throws IOException, Exception;
 }

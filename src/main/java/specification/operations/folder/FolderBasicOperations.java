@@ -31,4 +31,13 @@ public interface FolderBasicOperations {
      * @throws Exception if something bad happens
      */
     FolderWrapper listFolder(String location, String folderName) throws Exception;
+
+
+    /**
+     * Update metadata
+     * @param path on path
+     * @param name for file
+     * @param metadata meta
+     */
+    void updateMetadata(String path, String name, String metadata);
 }
